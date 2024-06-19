@@ -6,6 +6,7 @@ import Button from './Button/Button';
 import css from './App.module.css'
 import Loader from './Loader/Loader'
 import toast, { Toaster } from 'react-hot-toast';
+import { Circles } from 'react-loader-spinner';
 
 export class App extends Component {
   state = {
@@ -95,7 +96,7 @@ export class App extends Component {
       <div className={css.App}>
         <SearchBar handleSubmit={this.handleSubmit} />
         {images.length >= 1 && <ImageGallery images={images} />}
-        {isLoading && <Loader />}
+        {isLoading && <Circles height="80" width="80" color="#4fa94d" ariaLabel="circles-loading" wrapperStyle={{}} wrapperClass="" visible={true} />}
         {isError && toast.error("This didn't work.")}
         {images.length >= 1 && !isEnd && <Button handleClick={this.handleClick} />}
 
