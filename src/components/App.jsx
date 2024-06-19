@@ -29,7 +29,6 @@ export class App extends Component {
     try {
       this.setState({ isLoading: true })
       const fetchedImages = await getAPI(search, page)
-      console.log(fetchedImages)
 
       const { hits, totalHits } = fetchedImages
 
