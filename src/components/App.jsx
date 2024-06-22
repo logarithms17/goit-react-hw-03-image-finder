@@ -4,7 +4,6 @@ import { getAPI } from "pixabay-api";
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import css from './App.module.css'
-import Loader from './Loader/Loader'
 import toast, { Toaster } from 'react-hot-toast';
 import { Circles } from 'react-loader-spinner';
 
